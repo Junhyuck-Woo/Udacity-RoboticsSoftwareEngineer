@@ -1,2 +1,5 @@
 # Udacity-RoboticsSoftwareEngineer
-Fall 2020, School of Autonomous Systems
+## Introduction
+This repo is made for record the assignment (or project) of Nano degree.  
+I tried to improve the quality of each project.  
+After that, I will start the new project for my portfolio.
