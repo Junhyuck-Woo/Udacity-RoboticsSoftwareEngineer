@@ -34,23 +34,31 @@ void process_image_callback(const sensor_msgs::Image img)
     for(int i=0; i<img.height; i++) {
         for(int j=0; j<img.step; j+=3) {
             int pixel = i*img.step + j;
+            // Find the ball
             if ((img.data[pixel]==white_pixel) 
                 && (img.data[pixel+1]==white_pixel) 
                 && (img.data[pixel+2]==white_pixel)) {
                 
+                // Case 1: ball is located on the left
                 if(j < left) {
                     drive_robot(0.0, 0.5);
                     return;
-                } else if(j > right) {
+                } 
+                // Case 2: ball is located on the right
+                else if(j > right) {
                     drive_robot(0.0, -0.5);
                     return;
-                } else {
+                } 
+                // Case 3: ball is in the middle
+                else {
                     drive_robot(0.5, 0.0);
                     return;
                 }
             }
         }
     }
+
+    // Case 4: Fail to find the white ball
     drive_robot(0.0, 0.0);
 }
 
