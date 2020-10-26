@@ -9,6 +9,9 @@ ros::ServiceClient client;
 void drive_robot(float lin_x, float ang_z)
 {
     // TODO: Request a service and pass the velocities to it to drive the robot
+    ball_chaser::DriveToTarget srv;
+    srv.request.linear_x = lin_x;
+    srv.request.angular_z = ang_z;
 }
 
 // This callback function continuously executes and reads the image data
