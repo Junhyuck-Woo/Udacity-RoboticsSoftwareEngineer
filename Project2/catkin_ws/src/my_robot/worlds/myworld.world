@@ -1874,6 +1874,41 @@
       </link>
       <static>1</static>
     </model>
+    <model name='postbox'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://postbox/meshes/postbox.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://postbox/meshes/postbox.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>4.1914 -14.6639 0 0 -0 0</pose>
+    </model>
     <state world_name='default'>
       <sim_time>1050 872000000</sim_time>
       <real_time>37 610132654</real_time>
